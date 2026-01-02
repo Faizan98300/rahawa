@@ -9,11 +9,24 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Rawaha Official Website: Online Printing Services",
-  description:
-    "Rawaha - Custom business cards, marketing materials, signs, promotional products and more. Professional online printing services for small businesses.",
-  
+  title: "Rawaha",
+  description: "digital solutions",
+  keywords: [
+    "rawaha",
+    "digital solutions",
+  ],
+  authors: [{ name: "Rawaha Team" }],
+  creator: "rawaha",
+  publisher: "rawaha",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
   icons: {
     icon: [
       {
