@@ -9,23 +9,31 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Rawaha",
-  description: "digital solutions",
+  description: "Paper printing & digital solutions by Rawaha",
   keywords: [
-    "rawaha",
+    "Rawaha",
+    "Rawaha.online",
+    "paper printing services",
+    "printing",
     "digital solutions",
   ],
   authors: [{ name: "Rawaha Team" }],
-  creator: "rawaha",
-  publisher: "rawaha",
+  creator: "Rawaha",
+  publisher: "Rawaha",
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
-};
 
   icons: {
     icon: [
@@ -44,32 +52,10 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-}
- keywords: [
-    "Rawaha",
-    "Rawaha.online",
-    "paper printing services",
-    "printing",
-    "digital solutions"
-  ],
-  authors: [{ name: "Rawaha Team" }],
-  creator: "rawaha",
-  publisher: "rawaha",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1
-    }
-  },
-openGraph: {
-    title: "Rawaha ",
-    description:
-      " Rahawa’s ",
+
+  openGraph: {
+    title: "Rawaha",
+    description: "Professional printing and digital solutions by Rawaha",
     url: "https://rawaha.online",
     siteName: "Rawaha",
     images: [
@@ -77,29 +63,29 @@ openGraph: {
         url: "https://rawaha.online/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rawaha "
-      }
+        alt: "Rawaha",
+      },
     ],
     locale: "en_US",
-    type: "website"
+    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Rawaha ",
-    description:
-      ".",
-    images: ["https://rawaha.online/og-image.jpg"]
-  }
-};
+    title: "Rawaha",
+    description: "Professional printing and digital solutions by Rawaha",
+    images: ["https://rawaha.online/og-image.jpg"],
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <CartProvider>
           {children}
           <SocialSidebar />
