@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Rawaha Official Website: Online Printing Services",
   description:
     "Rawaha - Custom business cards, marketing materials, signs, promotional products and more. Professional online printing services for small businesses.",
-  generator: "v0.app",
+  
   icons: {
     icon: [
       {
@@ -32,7 +32,27 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
 }
-
+ keywords: [
+    "Rawaha",
+    "Rawaha.online",
+    "paper printing services",
+    "printing",
+    "digital solutions"
+  ],
+  authors: [{ name: "Rawaha Team" }],
+  creator: "rawaha",
+  publisher: "rawaha",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    }
+  },
 export default function RootLayout({
   children,
 }: Readonly<{
