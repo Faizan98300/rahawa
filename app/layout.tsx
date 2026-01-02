@@ -53,6 +53,32 @@ export const metadata: Metadata = {
       "max-video-preview": -1
     }
   },
+openGraph: {
+    title: "Rawaha ",
+    description:
+      " Rahawa’s ",
+    url: "https://rawaha.online",
+    siteName: "Rawaha",
+    images: [
+      {
+        url: "https://rawaha.online/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rawaha "
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rawaha ",
+    description:
+      ".",
+    images: ["https://rawaha.online/og-image.jpg"]
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
