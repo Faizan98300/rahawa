@@ -6,12 +6,12 @@ import SocialSidebar from "@/components/social-sidebar"
 import { CartProvider } from "@/lib/cart-context"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const geist = Geist({ subsets: ["latin"] })
+const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Rawaha",
-  description: "Paper printing & digital solutions by Rawaha",
+  description: "Digital solutions and printing services",
   keywords: [
     "Rawaha",
     "Rawaha.online",
@@ -20,9 +20,8 @@ export const metadata: Metadata = {
     "digital solutions",
   ],
   authors: [{ name: "Rawaha Team" }],
-  creator: "Rawaha",
-  publisher: "Rawaha",
-
+  creator: "rawaha",
+  publisher: "rawaha",
   robots: {
     index: true,
     follow: true,
@@ -34,28 +33,17 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-icon.png",
   },
-
   openGraph: {
     title: "Rawaha",
-    description: "Professional printing and digital solutions by Rawaha",
+    description: "Rawaha digital and printing solutions",
     url: "https://rawaha.online",
     siteName: "Rawaha",
     images: [
@@ -69,11 +57,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Rawaha",
-    description: "Professional printing and digital solutions by Rawaha",
+    description: "Rawaha digital solutions",
     images: ["https://rawaha.online/og-image.jpg"],
   },
 }
@@ -85,7 +72,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={`${geist.className} ${geistMono.className} antialiased`}>
         <CartProvider>
           {children}
           <SocialSidebar />
