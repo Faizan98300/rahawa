@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import SocialSidebar from "@/components/social-sidebar"
 import { CartProvider } from "@/lib/cart-context"
 import "./globals.css"
+<meta name="google-site-verification" content="gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE" />
 
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
