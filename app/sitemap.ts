@@ -1,4 +1,6 @@
 import { MetadataRoute } from "next";
+/sitemap.xml
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
