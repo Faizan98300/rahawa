@@ -91,7 +91,7 @@ export default function RootLayout({
               "logo": "https://rawaha.online/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+92-XXX-XXXXXXX",
+                "telephone": "+61981920835",
                 "contactType": "customer support"
               }
             })
