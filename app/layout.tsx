@@ -78,6 +78,25 @@ export default function RootLayout({
           <SocialSidebar />
         </CartProvider>
         <Analytics />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Rawaha Printing Services",
+              "url": "https://rawaha.online",
+              "logo": "https://rawaha.online/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+92-XXX-XXXXXXX",
+                "contactType": "customer support"
+              }
+            })
+          }}
+        />
+        
       </body>
     </html>
   )
