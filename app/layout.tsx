@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Rawaha",
   description: "Digital solutions and printing services",
@@ -13,9 +15,11 @@ export const metadata: Metadata = {
     "printing",
     "digital solutions",
   ],
+
   authors: [{ name: "Rawaha Team" }],
-  creator: "rawaha",
-  publisher: "rawaha",
+  creator: "Rawaha",
+  publisher: "Rawaha",
+
   robots: {
     index: true,
     follow: true,
@@ -27,6 +31,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
   icons: {
     icon: [
       { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
@@ -35,6 +40,7 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+
   openGraph: {
     title: "Rawaha",
     description: "Rawaha digital and printing solutions",
@@ -51,10 +57,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Rawaha",
     description: "Rawaha digital solutions",
     images: ["https://rawaha.online/og-image.jpg"],
   },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
+
