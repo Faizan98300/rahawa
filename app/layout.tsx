@@ -1,18 +1,11 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import SocialSidebar from "@/components/social-sidebar"
-import { CartProvider } from "@/lib/cart-context"
-import "./globals.css"
-<meta name="google-site-verification" content="gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE" />
-
-const geist = Geist({ subsets: ["latin"] })
-const geistMono = Geist_Mono({ subsets: ["latin"] })
-
 export const metadata: Metadata = {
   title: "Rawaha",
   description: "Digital solutions and printing services",
+
+  verification: {
+    google: "gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE",
+  },
+
   keywords: [
     "Rawaha",
     "Rawaha.online",
@@ -64,41 +57,4 @@ export const metadata: Metadata = {
     description: "Rawaha digital solutions",
     images: ["https://rawaha.online/og-image.jpg"],
   },
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={`${geist.className} ${geistMono.className} antialiased`}>
-        <CartProvider>
-          {children}
-          <SocialSidebar />
-        </CartProvider>
-        <Analytics />
-      
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Rawaha Printing Services",
-              "url": "https://rawaha.online",
-              "logo": "https://rawaha.online/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+61981920835",
-                "contactType": "customer support"
-              }
-            })
-          }}
-        />
-        
-      </body>
-    </html>
-  )
 }
