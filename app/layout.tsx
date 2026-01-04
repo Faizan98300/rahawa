@@ -3,25 +3,31 @@ import type { Metadata } from "next";
 import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
-  title: "Rawaha International Pvt Ltd – Paper Supplier & Business Card Paper in Pakistan
-",
-  description: "Digital solutions and printing services",
+  title: "Rawaha International Pvt Ltd – Paper Supplier & Business Card Paper in Pakistan",
+
+  description:
+    "Rawaha International Pvt Ltd is a trusted paper supplier based in Lahore, Pakistan. We provide business card paper, printing paper, and wholesale paper solutions across Pakistan.",
 
   verification: {
     google: "gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE",
   },
 
   keywords: [
-    "Rawaha",
-    "Rawaha.online",
-    "paper printing services",
-    "printing",
-    "digital solutions",
+    "Rawaha International Pvt Ltd",
+    "Rawaha International",
+    "paper supplier Pakistan",
+    "paper supplier Lahore",
+    "paper business card Pakistan",
+    "business card paper supplier",
+    "printing paper Pakistan",
+    "paper wholesale Pakistan",
+    "Urdu Bazar paper supplier",
+    "Rawaha paper",
   ],
 
-  authors: [{ name: "Rawaha Team" }],
-  creator: "Rawaha",
-  publisher: "Rawaha",
+  authors: [{ name: "Rawaha International Pvt Ltd" }],
+  creator: "Rawaha International Pvt Ltd",
+  publisher: "Rawaha International Pvt Ltd",
 
   robots: {
     index: true,
@@ -29,16 +35,18 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Rawaha",
-    description: "Rawaha digital and printing solutions",
+    title:
+      "Rawaha International Pvt Ltd – Paper Supplier in Lahore, Pakistan",
+    description:
+      "Rawaha International Pvt Ltd is a Lahore-based paper supplier providing business card paper, printing paper, and wholesale paper solutions across Pakistan.",
     url: "https://rawaha.online",
-    siteName: "Rawaha",
+    siteName: "Rawaha International Pvt Ltd",
     images: [
       {
         url: "https://rawaha.online/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rawaha",
+        alt: "Rawaha International Pvt Ltd Paper Supplier",
       },
     ],
     type: "website",
@@ -46,8 +54,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Rawaha",
-    description: "Rawaha digital solutions",
+    title:
+      "Rawaha International Pvt Ltd – Paper Supplier Pakistan",
+    description:
+      "Paper supplier in Lahore, Pakistan providing business card paper and wholesale printing paper solutions.",
     images: ["https://rawaha.online/og-image.jpg"],
   },
 };
@@ -60,9 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CartProvider>
-          {children}
-        </CartProvider>
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
