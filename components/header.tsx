@@ -29,7 +29,7 @@ export function Header() {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-[#000000] text-white text-center py-2 px-4 text-sm">
+      <div className="bg-[#444545] text-white text-center py-2 px-4 text-sm">
        
         <Link href="/gifts" className="ml-2 underline font-semibold">
           All gifts
