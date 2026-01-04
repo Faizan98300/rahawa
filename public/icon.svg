@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACq0lEQVR4nO2W20tUURSHv7XPGcdRUkdzMhkvY3ljyAsKpZGUEZUQhChED0EvvvQv9F9EVG/10OWtgoKIMDN6KelCD9EFDBU1tSxn0Blnzt49zFj4ds4oSOGCc9hPa3381vrttQUwbGGorSy+DbBhAKUES8mGAOyNFNc6M78iAhhMDuOckwJrxduiVZw61oIxmeJKvKuRQc+h+PGeBvp694FYTM384PKN5yyvJNcp4yqfJ1oBrQ2DJ+vpag+T1obSYAGF+T4uXjhIXbgYrQ1ehHANIAKWUpzpq6F6dyFFOyx6uyN0ttbQ3VlNLJZgaCBCa2NRJrFLClcASgRjIBIuoDLkI1QGB9qCiMojz19CXe1OThwqJ5FYpae9GIxgXHbWnQuykyIAJkV0r83j0a9cvzuCreDs6Xb6D/vZE4bxyRSiQGtXmV0CZP2ljUZwiMWWKQsW0t/XQWlFE/fuP6SrqQztJEC8edHbPWAyv+RqmlAQWtqiVDX3Mzw8Qjy+hCgNGMSDuTy7wNFQGLB49f4XRwcvUdfUjS1xqsMhVlcdlODJBZ4UMIBlKfL8+Xz/ucjQuSNEGyI8efoC2xfAtv2gEtlh2UyArKI+W5F2LMBHtH4XoYpy9neEmZ6qIJkEx+STZy9nW+AuXLVg7Y6PLzv4bD+jY3E6WypoqA0wPzfH+YFmJr6l+DLlkNY2qbTG7Y5yDSACk7MrPBtbwLZ8PBieYSmWpLREMfpygnefYqwkhTuPphFxv5g87QKRDExjJMhAXxRR+RQEfDiOw/TsAtduv0W7vQCy4ckFxmSW0cfxRa7eekMqlaK0JMCHz/NcufkaY7QnB/zJ6/VTSgxgRJSpqgxmz97zAMbzOl6LtXYAnlfwujy5AvwFEUwuT6HNAtho/Nuv4m2AbYD/AuA3z1oEc1tkZ98AAAAASUVORK5CYII=" width="32" height="32"/>
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .background { fill: black; }
+      .foreground { fill: white; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: white; }
+      .foreground { fill: black; }
+    }
+  </style>
+  <g clip-path="url(#clip0_7960_43945)">
+    <rect class="background" width="180" height="180" rx="37" />
+    <g style="transform: scale(95%); transform-origin: center">
+      <path class="foreground"
+        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
+      <path class="foreground"
+        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0_7960_43945">
+      <rect width="180" height="180" fill="white" />
+    </clipPath>
+  </defs>
 </svg>
