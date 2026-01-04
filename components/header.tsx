@@ -30,7 +30,7 @@ export function Header() {
     <>
       {/* Top Banner */}
       <div className="bg-[#0066cc] text-white text-center py-2 px-4 text-sm">
-        Get it by Christmas: Up to 40% off select last-minute gifts | Ends Dec. 22
+       
         <Link href="/gifts" className="ml-2 underline font-semibold">
           All gifts
         </Link>
