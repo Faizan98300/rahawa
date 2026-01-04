@@ -29,8 +29,8 @@ export function Header() {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-[#0066cc] text-white text-center py-2 px-4 text-sm">
-        Get it by Christmas: Up to 40% off select last-minute gifts | Ends Dec. 22
+      <div className="bg-[#444545] text-white text-center py-2 px-4 text-sm">
+       
         <Link href="/gifts" className="ml-2 underline font-semibold">
           All gifts
         </Link>
@@ -46,7 +46,7 @@ export function Header() {
           {/* Top Header Row */}
           <div className="flex items-center justify-between py-3">
             <div className="flex items-center gap-8">
-              <Link href="/" className="text-2xl font-bold text-[#0066cc]">
+              <Link href="/" className="text-2xl font-bold text-[#FFD700]">
                 Rawaha
               </Link>
               <div className="hidden lg:flex items-center gap-6">
