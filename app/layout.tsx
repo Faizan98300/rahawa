@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
-  title: "Rawaha",
+  title: "Rawaha International Pvt Ltd – Paper Supplier & Business Card Paper in Pakistan
+",
   description: "Digital solutions and printing services",
 
   verification: {
