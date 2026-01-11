@@ -15,6 +15,7 @@ export function Header() {
   const { cartCount } = useCart()
   const [currentUser, setCurrentUser] = useState<UserType | null>(null)
   const router = useRouter()
+  <link rel="icon" href="111.png" type="image/x-icon">
 
   useEffect(() => {
     setCurrentUser(getCurrentUser())
