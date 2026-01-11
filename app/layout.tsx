@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
-  title: "Rawaha International Pvt Ltd – Paper Supplier & Business Card Paper in Pakistan",
+  title: "Rawaha | Best Paper & Printing Seller in Lahore – Urdu Bazar",
 
-  description:
-    "Rawaha International Pvt Ltd is a trusted paper supplier based in Lahore, Pakistan. We provide business card paper, printing paper, and wholesale paper solutions across Pakistan.",
+ description:
+    "Rawaha is the most trusted paper and printing seller in Lahore Urdu Bazar. Serving all Pakistan since 2016 with best prices and quality.",
 
   verification: {
     google: "gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE",
@@ -23,7 +23,16 @@ export const metadata: Metadata = {
     "paper wholesale Pakistan",
     "Urdu Bazar paper supplier",
     "Rawaha paper",
+     "Rawaha",
+    "Rahawa",
+    "paper seller in Lahore",
+    "best paper seller in Lahore",
+    "paper seller in Pakistan",
+    "paper shop Urdu Bazar",
+    "printing paper Lahore"
   ],
+  icons: {
+    icon: "/111.png",
 
   authors: [{ name: "Rawaha International Pvt Ltd" }],
   creator: "Rawaha International Pvt Ltd",
@@ -35,12 +44,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      "Rawaha International Pvt Ltd – Paper Supplier in Lahore, Pakistan",
+    title: "Rawaha – Best Paper Seller in Lahore",
     description:
-      "Rawaha International Pvt Ltd is a Lahore-based paper supplier providing business card paper, printing paper, and wholesale paper solutions across Pakistan.",
+      "Trusted paper and printing seller in Lahore Urdu Bazar. Nationwide delivery across Pakistan.",
     url: "https://rawaha.online",
-    siteName: "Rawaha International Pvt Ltd",
+    siteName: "Rawaha",
     images: [
       {
         url: "https://rawaha.online/og-image.jpg",
