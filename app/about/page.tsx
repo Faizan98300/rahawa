@@ -15,7 +15,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rawaha</h1>
             <p className="text-xl md:text-2xl text-balance max-w-3xl mx-auto">
-              Empowering small businesses and individuals to make a lasting impression since 1995
+              Empowering small businesses and individuals to make a lasting impression since 2016
             </p>
           </div>
         </section>
@@ -27,17 +27,17 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-[#003d7a]">Our Story</h2>
                 <p className="text-lg leading-relaxed mb-4">
-                  Founded in 1995, Rawaha has grown from a small startup to the world's leading online provider of
-                  professional marketing products and services to micro businesses and consumers.
+                  Rawaha is a trusted paper and printing seller in Lahore, located in Urdu Bazar,
+                  serving customers across Pakistan since 2016. We provide premium quality paper,
+                  printing materials, and custom solutions for businesses, schools, offices, and individuals.
                 </p>
                 <p className="text-lg leading-relaxed mb-4">
-                  We believe that everyone, regardless of budget or expertise, deserves professional marketing materials
-                  to help them succeed. Our mission is to make it easy and affordable for small businesses to create
-                  custom, professional marketing.
+                  Known by many customers as Rawaha (also searched as Rahawa), we are recognized for
+                  best prices, consistent quality, and nationwide delivery. Our physical store in
+                  Urdu Bazar Lahore makes us one of the most reliable paper sellers in Lahore.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Today, we serve millions of customers worldwide, helping them bring their visions to life with
-                  high-quality printed products and marketing services.
+                  اگر آپ لاہور یا پاکستان میں بہترین پیپر سیلر تلاش کر رہے ہیں تو راواہا آپ کا قابل اعتماد انتخاب ہے۔
                 </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
