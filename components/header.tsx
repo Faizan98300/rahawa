@@ -46,6 +46,8 @@ export function Header() {
           {/* Top Header Row */}
           <div className="flex items-center justify-between py-3">
             <div className="flex items-center gap-8">
+              <Image src="/logo.png" width={42} height={42} alt="Rawaha logo" />
+
               <Link href="/" className="text-2xl font-bold text-[#FFD700]">
                 Rawaha
               </Link>
