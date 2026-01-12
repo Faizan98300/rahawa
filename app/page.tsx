@@ -14,10 +14,10 @@ export default function RawahaClone() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-              Order tonight to get  delivery with express shipping
+              Best Paper and Printing Seller in Lahore – Rawaha
             </h1>
             <p className="text-xl text-gray-700 mb-2">
-              Up to 50% off cards & wall . Plus, up to 40% off gifts.
+              Up to 10% off cards & wall . Plus, up to 15% off gifts.
             </p>
             <p className="text-sm text-gray-600 mb-6">Ends Dec. 22</p>
             <div className="flex justify-center gap-4 mb-6 flex-wrap">
