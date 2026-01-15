@@ -1,20 +1,23 @@
 "use client"
 
+"use client"
+
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search, ShoppingCart, User, ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { getCurrentUser, logout, type User as UserType } from "@/lib/auth"
 import { useRouter } from "next/navigation"
 import { useCart } from "@/lib/cart-context"
 
-export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { cartCount } = useCart()
-  const [currentUser, setCurrentUser] = useState<UserType | null>(null)
-  const router = useRouter()
 
   useEffect(() => {
     setCurrentUser(getCurrentUser())
