@@ -3,10 +3,15 @@ import type { Metadata } from "next";
 import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
-  title: "Rawaha | Best Paper & Printing Seller in Lahore – Urdu Bazar",
+  metadataBase: new URL("https://rawaha.online"),
+
+  title: {
+    default: "Rawaha International Pvt Ltd | Paper & Printing Supplier in Lahore",
+    template: "%s | Rawaha International Pvt Ltd",
+  },
 
   description:
-    "Rawaha is the most trusted paper and printing seller in Lahore Urdu Bazar. Serving all Pakistan since 2016 with best prices and quality.",
+    "Rawaha International Pvt Ltd is a trusted paper and printing supplier in Lahore Urdu Bazar. Serving all Pakistan since 2016 with premium quality and best prices.",
 
   verification: {
     google: "gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE",
@@ -17,23 +22,26 @@ export const metadata: Metadata = {
     "Rawaha International",
     "paper supplier Pakistan",
     "paper supplier Lahore",
-    "paper business card Pakistan",
-    "business card paper supplier",
     "printing paper Pakistan",
     "paper wholesale Pakistan",
+    "business card paper supplier",
     "Urdu Bazar paper supplier",
+    "paper seller in Lahore",
+    "best paper seller in Lahore",
+    "paper shop Urdu Bazar",
     "Rawaha paper",
     "Rawaha",
     "Rahawa",
-    "paper seller in Lahore",
-    "best paper seller in Lahore",
-    "paper seller in Pakistan",
-    "paper shop Urdu Bazar",
-    "printing paper Lahore",
   ],
 
+  alternates: {
+    canonical: "https://rawaha.online",
+  },
+
   icons: {
-    icon: "/111.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 
   authors: [{ name: "Rawaha International Pvt Ltd" }],
@@ -43,22 +51,30 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 
   openGraph: {
-    title: "Rawaha – Best Paper Seller in Lahore",
+    title: "Rawaha International Pvt Ltd – Paper Supplier in Lahore",
     description:
-      "Trusted paper and printing seller in Lahore Urdu Bazar. Nationwide delivery across Pakistan.",
+      "Trusted paper and printing supplier in Lahore Urdu Bazar. Nationwide delivery across Pakistan.",
     url: "https://rawaha.online",
-    siteName: "Rawaha",
+    siteName: "Rawaha International Pvt Ltd",
     images: [
       {
-        url: "https://rawaha.online/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Rawaha International Pvt Ltd Paper Supplier",
       },
     ],
+    locale: "en_PK",
     type: "website",
   },
 
@@ -66,9 +82,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rawaha International Pvt Ltd – Paper Supplier Pakistan",
     description:
-      "Paper supplier in Lahore, Pakistan providing business card paper and wholesale printing paper solutions.",
-    images: ["https://rawaha.online/og-image.jpg"],
+      "Paper supplier in Lahore providing business card paper and wholesale printing paper across Pakistan.",
+    images: ["/og-image.jpg"],
   },
+
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
