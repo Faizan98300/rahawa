@@ -1,37 +1,36 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Search, ShoppingCart, User, ChevronDown, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Search, ShoppingCart, User, ChevronDown, Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { getCurrentUser, logout, type User as UserType } from "@/lib/auth";
-import { useRouter } from "next/navigation";
-import { useCart } from "@/lib/cart-context";
+} from "@/components/ui/dropdown-menu"
+import { getCurrentUser, logout, type User as UserType } from "@/lib/auth"
+import { useRouter } from "next/navigation"
+import { useCart } from "@/lib/cart-context"
 
-export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState<UserType | null>(null);
-
-  const router = useRouter();
-  const { cartCount } = useCart();
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { cartCount } = useCart()
+  const [currentUser, setCurrentUser] = useState<UserType | null>(null)
+  const router = useRouter()
 
   useEffect(() => {
-    setCurrentUser(getCurrentUser());
-  }, []);
+    setCurrentUser(getCurrentUser())
+  }, [])
 
   const handleLogout = () => {
-    logout();
-    setCurrentUser(null);
-    router.push("/");
-  };
+    logout()
+    setCurrentUser(null)
+    router.push("/")
+  }
 
   return (
     <>
@@ -56,66 +55,9 @@ export default function Header() {
               <Link href="/" className="text-2xl font-bold text-[#FFD700]">
                 Rawaha
               </Link>
-
-              <div className="hidden lg:flex items-center gap-6">
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1 text-sm hover:text-[#0066cc]">
-                    Business Cards <ChevronDown className="w-4 h-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuItem asChild>
-                      <Link href="/category/business-cards">Standard Business Cards</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/category/business-cards">Premium Business Cards</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/category/business-cards">Rounded Corner Cards</Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                <Link href="/deals" className="text-sm text-red-600 font-semibold">
-                  Deals
-                </Link>
-              </div>
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="hidden md:flex items-center gap-2 border rounded-md px-3 py-2">
-                <Search className="w-4 h-4 text-gray-500" />
-                <Input
-                  type="text"
-                  placeholder="Search products"
-                  className="border-0 focus-visible:ring-0 w-[200px] p-0"
-                />
-              </div>
-
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <User className="w-5 h-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {currentUser ? (
-                    <>
-                      <div className="px-2 py-2 border-b">
-                        <p className="font-semibold">{currentUser.name}</p>
-                        <p className="text-xs text-gray-500">{currentUser.email}</p>
-                      </div>
-                      <DropdownMenuItem onClick={handleLogout}>
-                        Sign Out
-                      </DropdownMenuItem>
-                    </>
-                  ) : (
-                    <DropdownMenuItem asChild>
-                      <Link href="/login">Sign In</Link>
-                    </DropdownMenuItem>
-                  )}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
               <Link href="/cart">
                 <Button variant="ghost" size="icon" className="relative">
                   <ShoppingCart className="w-5 h-5" />
@@ -133,24 +75,13 @@ export default function Header() {
                 className="lg:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {mobileMenuOpen ? <X /> : <Menu />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
             </div>
           </div>
         </div>
       </header>
-
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b p-4 space-y-4">
-          <Link href="/category/business-cards">Business Cards</Link>
-          <Link href="/category/marketing">Marketing Materials</Link>
-          <Link href="/category/clothing">Clothing & Bags</Link>
-          <Link href="/category/gifts">Gifts & Stationery</Link>
-          <Link href="/deals" className="text-red-600 font-semibold">
-            Deals
-          </Link>
-        </div>
-      )}
     </>
-  );
+  )
 }
+
