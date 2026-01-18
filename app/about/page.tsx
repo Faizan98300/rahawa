@@ -15,7 +15,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Rawaha</h1>
             <p className="text-xl md:text-2xl text-balance max-w-3xl mx-auto">
-              Empowering small businesses and individuals to make a lasting impression since 2016
+              Empowering small businesses and individuals to make a lasting impression since 1995
             </p>
           </div>
         </section>
@@ -27,17 +27,27 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-[#003d7a]">Our Story</h2>
                 <p className="text-lg leading-relaxed mb-4">
-                  Rawaha is a trusted paper and printing seller in Lahore, located in Urdu Bazar,
-                  serving customers across Pakistan since 2016. We provide premium quality paper,
-                  printing materials, and custom solutions for businesses, schools, offices, and individuals.
+                  About Us
+                  With a vision to excel in the business of Paper Manufacturing, Import & Export, Rawaha International (Private) Limited was incorporated on April 14, 2016 under Companies Ordinance,
+                  1984.
+                  The company privately owned, headed by a Chief Executive officer, has an efficient board of directors that supervise the operations of the company and carry out the decision making. Rawaha International comprises of a team of strong professionals who accomplish their defined roles to achieve the overall business objectives according to the highest standards of competence and corporate responsibility.
+                  The head office of the company is located in Punjab Paper Market, Opposite Police Station, Abkari Road, New Anarkali, Lahore.
+                  Vision
+                  To be one of the leading organizations in the industry, effectively achieving business objectives, attaining ultimate client satisfaction and pursuing multiple growth opportunities while remaining ethically and socially responsible.
+                  Mission Statement
+                  * To provide our customers with highest quality products in a safe, reliable, efficient and environmentally sound manner.
+                  * Combining the latest technology with most efficient management systems to seek leadership and trend setting within the industry.
+                  * Developing deep-rooted and cordial relationship with all customers and stakeholders and maximization of returns to the stakeholders.
+                  * Maintaining highest standards of corporate culture while providing the employees an opportunity to work in a competitive environment and swift career progression.
                 </p>
                 <p className="text-lg leading-relaxed mb-4">
-                  Known by many customers as Rawaha (also searched as Rahawa), we are recognized for
-                  best prices, consistent quality, and nationwide delivery. Our physical store in
-                  Urdu Bazar Lahore makes us one of the most reliable paper sellers in Lahore.
+                  We believe that everyone, regardless of budget or expertise, deserves professional marketing materials
+                  to help them succeed. Our mission is to make it easy and affordable for small businesses to create
+                  custom, professional marketing.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  اگر آپ لاہور یا پاکستان میں بہترین پیپر سیلر تلاش کر رہے ہیں تو راواہا آپ کا قابل اعتماد انتخاب ہے۔
+                  Today, we serve millions of customers worldwide, helping them bring their visions to life with
+                  high-quality printed products and marketing services.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -103,19 +113,19 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-12 text-center text-[#003d7a]">Rawaha By The Numbers</h2>
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-5xl font-bold text-[#0066cc] mb-2">30+</div>
+                <div className="text-5xl font-bold text-[#0066cc] mb-2">10+</div>
                 <p className="text-lg text-gray-600">Years in Business</p>
               </div>
               <div>
-                <div className="text-5xl font-bold text-[#0066cc] mb-2">17M+</div>
+                <div className="text-5xl font-bold text-[#0066cc] mb-2">2000+</div>
                 <p className="text-lg text-gray-600">Customers Worldwide</p>
               </div>
               <div>
-                <div className="text-5xl font-bold text-[#0066cc] mb-2">190+</div>
+                <div className="text-5xl font-bold text-[#0066cc] mb-2">4+</div>
                 <p className="text-lg text-gray-600">Countries Served</p>
               </div>
               <div>
-                <div className="text-5xl font-bold text-[#0066cc] mb-2">5000+</div>
+                <div className="text-5xl font-bold text-[#0066cc] mb-2">500+</div>
                 <p className="text-lg text-gray-600">Dedicated Employees</p>
               </div>
             </div>

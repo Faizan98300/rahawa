@@ -1,105 +1,84 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { CartProvider } from "@/lib/cart-context";
+import type React from "react"
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import SocialSidebar from "@/components/social-sidebar"
+import { CartProvider } from "@/lib/cart-context"
+import "./globals.css"
+
+const geist = Geist({ subsets: ["latin"] })
+const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rawaha.online"),
-
-  title: {
-    default: "Rawaha International Pvt Ltd | Paper & Printing Supplier in Lahore",
-    template: "%s | Rawaha International Pvt Ltd",
-  },
-
-  description:
-    "Rawaha International Pvt Ltd is a trusted paper and printing supplier in Lahore Urdu Bazar. Serving all Pakistan since 2016 with premium quality and best prices.",
-
-  verification: {
-    google: "gQdDC3x6oOroyXB4qi7PlFfObbqgMN044XiG89hZvPE",
-  },
-
+  title: "Rawaha",
+  description: "Digital solutions and printing services",
   keywords: [
-    "Rawaha International Pvt Ltd",
-    "Rawaha International",
-    "paper supplier Pakistan",
-    "paper supplier Lahore",
-    "printing paper Pakistan",
-    "paper wholesale Pakistan",
-    "business card paper supplier",
-    "Urdu Bazar paper supplier",
-    "paper seller in Lahore",
-    "best paper seller in Lahore",
-    "paper shop Urdu Bazar",
-    "Rawaha paper",
     "Rawaha",
-    "Rahawa",
+    "Rawaha.online",
+    "paper printing services",
+    "printing",
+    "digital solutions",
   ],
-
-  alternates: {
-    canonical: "https://rawaha.online",
-  },
-
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
-
-  authors: [{ name: "Rawaha International Pvt Ltd" }],
-  creator: "Rawaha International Pvt Ltd",
-  publisher: "Rawaha International Pvt Ltd",
-
+  authors: [{ name: "Rawaha Team" }],
+  creator: "rawaha",
+  publisher: "rawaha",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
       "max-snippet": -1,
+      "max-image-preview": "large",
       "max-video-preview": -1,
     },
   },
-
+  icons: {
+    icon: [
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
-    title: "Rawaha International Pvt Ltd – Paper Supplier in Lahore",
-    description:
-      "Trusted paper and printing supplier in Lahore Urdu Bazar. Nationwide delivery across Pakistan.",
+    title: "Rawaha",
+    description: "Rawaha digital and printing solutions",
     url: "https://rawaha.online",
-    siteName: "Rawaha International Pvt Ltd",
+    siteName: "Rawaha",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://rawaha.online/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rawaha International Pvt Ltd Paper Supplier",
+        alt: "Rawaha",
       },
     ],
-    locale: "en_PK",
+    locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Rawaha International Pvt Ltd – Paper Supplier Pakistan",
-    description:
-      "Paper supplier in Lahore providing business card paper and wholesale printing paper across Pakistan.",
-    images: ["/og-image.jpg"],
+    title: "Rawaha",
+    description: "Rawaha digital solutions",
+    images: ["https://rawaha.online/og-image.jpg"],
   },
-
-  themeColor: "#ffffff",
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body>
-        <CartProvider>{children}</CartProvider>
+      <body className={`${geist.className} ${geistMono.className} antialiased`}>
+        <CartProvider>
+          {children}
+          <SocialSidebar />
+        </CartProvider>
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
-

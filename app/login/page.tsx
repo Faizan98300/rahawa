@@ -57,12 +57,6 @@ export default function LoginPage() {
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">{error}</div>
             )}
 
-            <div className="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded mb-4 text-sm">
-              <p className="font-semibold mb-1">Demo Credentials:</p>
-              <p>Admin: admin@rawaha.com / password</p>
-              <p>User: user@example.com / password</p>
-            </div>
-
             <form className="space-y-4" onSubmit={handleSubmit}>
               {isSignUp && (
                 <>

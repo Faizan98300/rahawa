@@ -6,7 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://rawaha.online/sitemap.xml"
-
+    sitemap: "https://rahawa.online/sitemap.xml"
   };
 }
