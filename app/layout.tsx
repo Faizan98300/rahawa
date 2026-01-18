@@ -6,73 +6,41 @@ import SocialSidebar from "@/components/social-sidebar"
 import { CartProvider } from "@/lib/cart-context"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"] })
-const geistMono = Geist_Mono({ subsets: ["latin"] })
+const _geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Rawaha",
-  description: "Digital solutions and printing services",
-  keywords: [
-    "Rawaha",
-    "Rawaha.online",
-    "paper printing services",
-    "printing",
-    "digital solutions",
-  ],
-  authors: [{ name: "Rawaha Team" }],
-  creator: "rawaha",
-  publisher: "rawaha",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
-  },
+  title: "Rawaha Official Website: Online Printing Services",
+  description:
+    "Rawaha - Custom business cards, marketing materials, signs, promotional products and more. Professional online printing services for small businesses.",
+  generator: "v0.app",
   icons: {
     icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-icon.png",
-  },
-  openGraph: {
-    title: "Rawaha",
-    description: "Rawaha digital and printing solutions",
-    url: "https://rawaha.online",
-    siteName: "Rawaha",
-    images: [
       {
-        url: "https://rawaha.online/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Rawaha",
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
       },
     ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rawaha",
-    description: "Rawaha digital solutions",
-    images: ["https://rawaha.online/og-image.jpg"],
+    apple: "/apple-icon.png",
   },
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={`${geist.className} ${geistMono.className} antialiased`}>
+      <body className={`font-sans antialiased`}>
         <CartProvider>
           {children}
           <SocialSidebar />

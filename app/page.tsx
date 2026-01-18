@@ -14,7 +14,7 @@ export default function RawahaClone() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-              Order tonight to get  delivery with express shipping
+              Rawaha
             </h1>
             <p className="text-xl text-gray-700 mb-2">
               Up to 10% off cards & wall calendars. Plus, up to 15% off gifts.
@@ -194,16 +194,9 @@ export default function RawahaClone() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-6 text-center">Rawaha: Here for small business since 2016.</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            With a vision to excel in the business of Paper Manufacturing, Import & Export, Rawaha International (Private) Limited was incorporated on April 14, 2016 under Companies Ordinance,
-            1984. The company is privately owned, headed by a Chief Executive officer, has an efficient board of directors that supervise the operations of the company and carry out the decision making. Rawaha International comprises of a team of strong professionals who accomplish their defined roles to achieve the overall business objectives according to the highest standards of competence and corporate responsibility.
-            The head office of the company is located in Punjab Paper Market, Opposite Police Station, Abkari Road, New Anarkali, Lahore.
-            Vision 
-            To be one of the leading organizations in the industry, effectively achieving business objectives, attaining ultimate client satisfaction and pursuing multiple growth opportunities while remaining ethically and socially responsible.
-            Mission Statement
-            * To provide our customers with highest quality products in a safe, reliable, efficient and environmentally sound manner.
-            * Combining the latest technology with most efficient management systems to seek leadership and trend setting within the industry.
-            * Developing deep-rooted and cordial relationship with all customers and stakeholders and maximization of returns to the stakeholders.
-            * Maintaining highest standards of corporate culture while providing the employees an opportunity to work in a competitive environment and swift career progression.
+            For more than 10 years, Rawaha has helped small business owners, entrepreneurs and dreamers create custom
+            designs and professional marketing. Our online printing services are intended to help you find custom
+            products you need – business cards, promotional marketing and more – to create a look you love.
           </p>
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <div>
