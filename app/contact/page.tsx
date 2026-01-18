@@ -217,22 +217,22 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name *</Label>
-                        <Input id="firstName" placeholder="John" required />
+                        <Input id="firstName" placeholder="First Name" required />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName">Last Name *</Label>
-                        <Input id="lastName" placeholder="Doe" required />
+                        <Input id="lastName" placeholder="Last Name" required />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" type="email" placeholder="john.doe@example.com" required />
+                      <Input id="email" type="email" placeholder="Example@example.com" required />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" type="tel" placeholder="(555) 123-4567" />
+                      <Input id="phone" type="tel" placeholder="number" />
                     </div>
 
                     <div className="space-y-2">
@@ -294,9 +294,9 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-[#0066cc] flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-lg mb-2">Corporate Office</h3>
-                      <p className="text-gray-600">275 Wyman Street</p>
-                      <p className="text-gray-600">Waltham, MA 02451</p>
-                      <p className="text-gray-600">United States</p>
+                      <p className="text-gray-600">Asghar Trader Centre, 7 Paisa Abkari road,Lahore.</p>
+                      <p className="text-gray-600"> 7 Paisa Abkari road,Lahore.</p>
+                      <p className="text-gray-600">Pakistan</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 mb-6">
