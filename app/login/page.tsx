@@ -20,10 +20,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const router = useRouter()
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
   setError("")
