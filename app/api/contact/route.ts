@@ -1,44 +1,60 @@
-import Credentials from "next-auth/providers/credentials"
+import NextAuth from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaClient } from "@prisma/client"
 import bcrypt from "bcryptjs"
 
 const prisma = new PrismaClient()
 
-Credentials({
-  name: "Credentials",
-  credentials: {
-    email: { label: "Email", type: "email" },
-    password: { label: "Password", type: "password" },
+const handler = NextAuth({
+  session: {
+    strategy: "jwt",
   },
 
-  async authorize(credentials) {
-    if (!credentials?.email || !credentials?.password) {
-      return null
-    }
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
 
-    const user = await prisma.user.findUnique({
-      where: { email: credentials.email },
-    })
+      credentials: {
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
+      },
 
-    if (!user || !user.password) {
-      return null
-    }
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          return null
+        }
 
-    const isValid = await bcrypt.compare(
-      credentials.password,
-      user.password
-    )
+        const user = await prisma.user.findUnique({
+          where: { email: credentials.email },
+        })
 
-    if (!isValid) {
-      return null
-    }
+        if (!user || !user.password) {
+          return null
+        }
 
-    return {
-      id: user.id,
-      email: user.email,
-      name: user.name,
-      role: user.role,
-    }
+        const isValid = await bcrypt.compare(
+          credentials.password,
+          user.password
+        )
+
+        if (!isValid) {
+          return null
+        }
+
+        return {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        }
+      },
+    }),
+  ],
+
+  pages: {
+    signIn: "/login",
   },
 })
+
+export { handler as GET, handler as POST }
 
