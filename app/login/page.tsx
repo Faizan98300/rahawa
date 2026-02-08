@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
 import { useState } from "react"
-import { authenticateUser, setCurrentUser } from "@/lib/auth"
+import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
 export default function LoginPage() {
@@ -24,22 +24,23 @@ export default function LoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setError("")
 
-    const user = authenticateUser(email, password)
+  const res = await signIn("credentials", {
+    email,
+    password,
+    redirect: false,
+  })
 
-    if (user) {
-      setCurrentUser(user)
-
-      // Redirect based on user role
-      if (user.role === "admin") {
-        router.push("/admin")
-      } else {
-        router.push("/account")
-      }
-    } else {
-      setError("Invalid email or password")
-    }
+  if (res?.error) {
+    setError("Invalid email or password")
+  } else {
+    router.push("/account")
   }
+}
+
 
   return (
     <div className="min-h-screen bg-white">
